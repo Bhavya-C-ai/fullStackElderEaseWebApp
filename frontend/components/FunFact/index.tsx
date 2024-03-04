@@ -59,7 +59,9 @@ const FunFact = () => {
               Built especially for elders
             </h2>
             <p className="mx-auto lg:w-11/12">
-            Built Especially for Elders: Our web app prioritizes accessibility and user comfort, offering gentle yoga sessions tailored to older adults' needs. With personalized guidance through machine learning, users receive custom pose recommendations. Additionally, our platform serves as a comprehensive wellness hub, providing educational resources and progress tracking. Join us on the journey to healthy aging and improved well-being.
+            Built Especially for Elders: Our web app prioritizes accessibility and user comfort, offering gentle yoga sessions tailored to older adults' needs. With personalized guidance through machine learning, users receive custom pose recommendations.
+            <br></br>,<br></br>,
+             Additionally  our platform serves as a comprehensive wellness hub, providing educational resources and progress tracking. Join us on the journey to healthy aging and improved well-being.
             </p>
           </motion.div>
 
