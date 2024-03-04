@@ -258,6 +258,10 @@ const Homepage = () => {
         <>
           <div>
             <div>
+              <br />
+              <br />
+              <br />
+              <br />
               <div className="flex justify-center lg:gap-8 xl:gap-32.5 ">
                 <div className=" md:w-1/2 ">
                   <h1 className="mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-4xl text-center">
@@ -278,6 +282,7 @@ const Homepage = () => {
               </div>
             </div>
           </div>
+          <br />
           <section
             id="support"
             className="px-44 pt-0 md:px-8 2xl:px-0 w-90/100"
@@ -300,8 +305,8 @@ const Homepage = () => {
               </div>
 
               <div
-                className="flex flex-col-reverse flex-wrap gap-8 md:flex-row md:flex-nowrap md:justify-between xl:gap-20"
-                style={{ height: "900px" }}
+                className="flex flex-col flex-wrap gap-8 md:flex-row md:flex-nowrap md:justify-between xl:gap-20"
+  
               >
                 <motion.div
                   variants={{
@@ -427,8 +432,8 @@ const Homepage = () => {
                         (
                           poseData.find((pose) => pose.Name === currentPose) ||
                           posesData.find((pose) => pose.Name === currentPose)
-                        )?.photoURL ||
-                        "/images/about/defaultimg.webp" }
+                        )?.photoURL || "/images/about/defaultimg.webp"
+                      }
                       alt="About"
                       className="dark:hidden m-3 p-15 w-100 h-100"
                       fill

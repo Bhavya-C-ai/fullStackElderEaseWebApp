@@ -265,7 +265,6 @@ const Contact = () => {
                   <div class="-m-9 z-10 bg-white rounded-full"><img src={user?.photoURL} alt="profile image" class='w-24 h-24 rounded-full object-cover p-2' /></div>
                   <div class='text-center mt-12'>
                     <h1 class='mb-1 text-xl font-medium dark:text-gray-900'>{user?.displayName}</h1>
-                    <p class='text-sm text-gray-400 dark:text-gray-500'>Michigan, United States</p>
                   </div>
                   <input
                     type="text"
