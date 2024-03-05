@@ -335,6 +335,5 @@ def video_feed_balasana():
 # def video_feed_corpse():
 #     return Response(generateFramesCorpsePose(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
-if __name__ == "__main__":
-    app.run(debug=True, port=8080) 
+
 
