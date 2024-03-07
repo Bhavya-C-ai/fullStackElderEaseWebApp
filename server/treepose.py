@@ -43,8 +43,8 @@ def classifyTreePose(landmarks, output_image, display=False):
     
     if left_knee_angle > 165 and left_knee_angle < 195 or right_knee_angle > 165 and right_knee_angle < 195:
         if left_knee_angle > 305 and left_knee_angle < 355 or right_knee_angle > 15 and right_knee_angle < 65:
-            if left_elbow_angle > 165 and left_elbow_angle < 195 and right_elbow_angle > 165 and right_elbow_angle < 195:
-                if left_shoulder_angle > 80 and left_shoulder_angle < 110 and right_shoulder_angle > 80 and right_shoulder_angle < 110:
+            if left_elbow_angle > 120 and left_elbow_angle < 160 and right_elbow_angle > 200 and right_elbow_angle < 240:
+                if left_shoulder_angle > 150 and left_shoulder_angle < 200 and right_shoulder_angle > 150 and right_shoulder_angle < 200:
                     label = 'Thats it, Perfect Tree Pose'
                 else:
                     label='Both shoulders should be at 90 degrees with waist.'
@@ -52,7 +52,7 @@ def classifyTreePose(landmarks, output_image, display=False):
                 label='Elbows should be at 90 degrees with arms'
         else:
             label="Keep either foot on the knee or above"
-    else:
+    else: 
         label="Keep either foot on the knee or above"
     
     if(label!=prev_label): 

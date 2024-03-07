@@ -32,7 +32,7 @@ def giveLabelForCobraPose(left_elbow_angle, right_elbow_angle, left_hip_angle, r
     global prev_label
     label = 'Unknown'
     if (left_elbow_angle > 150 and left_elbow_angle < 190) or (right_elbow_angle > 150 and right_elbow_angle < 190):
-        if (left_hip_angle > 205 and left_hip_angle < 245) or (right_hip_angle > 75 and right_hip_angle < 145):
+        if (left_hip_angle > 195 and left_hip_angle < 235) or (right_hip_angle > 65 and right_hip_angle < 155):
             if (left_knee_angle > 150 and left_knee_angle < 190) or (right_knee_angle > 150 and right_knee_angle < 190):
                 label = 'Thats it, Perfect Bhujangasana'
             else:

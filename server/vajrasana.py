@@ -33,7 +33,7 @@ def giveLabelForVajrasanaSide(left_elbow_angle, right_elbow_angle, left_knee_ang
     label = 'Unknown'
     
     if (left_elbow_angle > 110 and left_elbow_angle < 170) or (right_elbow_angle > 180 and right_elbow_angle < 240):
-        if (left_hip_angle > 70 and left_hip_angle < 110) or (right_hip_angle > 250 and right_hip_angle < 290):
+        if (left_hip_angle > 235 and left_hip_angle < 260) or (right_hip_angle > 80 and right_hip_angle < 120):
             if (left_knee_angle > 0 and left_knee_angle < 100) or (right_knee_angle > 290 and right_knee_angle < 360):
                 label = 'Thats it, Perfect Vajrasana'
             else:
