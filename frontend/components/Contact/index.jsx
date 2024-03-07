@@ -231,33 +231,11 @@ const Contact = () => {
               whileInView="visible"
               transition={{ duration: 2, delay: 0.1 }}
               viewport={{ once: true }}
-              className="animate_top w-full md:w-2/5 md:p-7.5 lg:w-[26%] xl:pt-15 flex items-center"
+              className="animate_top w-full md:w-2/5 md:p-7.5 lg:w-[26%] xl:pt-15 flex items-center justify-center"
             >
-              {/* <div className="flex">
-                {/* <Image
-            src={user?.photoURL}
-            fill
-            className='rounded-full '
-            alt='profile'
-          /> */}
-
-              {/* <h2 className="mb-20 text-metatitle3  font-semibold text-black dark:text-white xl:text-sectiontitle2">
-                  Hello, {user?.displayName.split(" ")[0]}
-                  <h3 className="mb-4 mt-5 text-metatitle3 font-medium text-black dark:text-white">
-                    Email
-                    <br></br>
-                    <input
-                      type="text"
-                      id="input-group-1"
-                      value={user?.email}
-                      disabled={true}
-                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-5 mt-5"
-                    />
-                  </h3>
-                </h2> */}
-              {/* </div> */}
-              <main class='main w-full-screen  flex justify-center items-center before:z-[-1] before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:opacity-20'>
-                <section class="cursor-pointer rounded-md min-w-72 min-h-96 bg-white flex flex-col items-center drop-shadow-lg hover:scale-105 active:scale-95 transition">
+            
+              <main class='main  w-full-screen  flex justify-center items-center before:z-[-1] before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:opacity-20'>
+                <section class="cursor-pointer   rounded-md min-w-72 min-h-96 bg-white flex flex-col items-center drop-shadow-lg hover:scale-105 active:scale-95 transition">
                   <div class='relative h-32 w-72'>
                     <div class='absolute bg-orange-400 opacity-80 w-full h-full rounded-t-md'></div>
                     <img src="https://images.unsplash.com/photo-1632377082529-611764ce0fef?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDg4MjU5NTF8&ixlib=rb-4.0.3&q=85" alt="card cover" class='w-full h-full object-cover rounded-t-md' />
@@ -282,22 +260,7 @@ const Contact = () => {
                 </h3>
                 <p>290 Maryam Springs 260, Courbevoie, Paris, France</p> */}
               </div>
-              {/* <div className="5 mb-7">
-                <h3 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
-                  UserName
-                </h3>
-                <p>
-                  <a href="#">yourmail@domainname.com</a>
-                </p>
-              </div>
-              <div>
-                <h4 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
-                  Phone Number
-                </h4>
-                <p>
-                  <a href="#">+009 42334 6343 843</a>
-                </p>
-              </div> */}
+             
             </motion.div>
             <motion.div
               variants={{

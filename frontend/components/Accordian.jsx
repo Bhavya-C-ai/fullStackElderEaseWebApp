@@ -45,7 +45,7 @@ const AccordionItem = ({ header, text ,options,array,setarray,displayarray}) => 
             </button>
 
             <div
-                className={`pl-[62px] duration-200 ease-in-out ${active ? "block" : "hidden"
+                className={`pl-[62px]  duration-200 ease-in-out ${active ? "block" : "hidden"
                     }`}
             >
                
