@@ -44,4 +44,8 @@ Install dependencies
 ```shell
 pip install -r requirements.txt
 ```
+Start server
+```shell
+python3 server.py
+```
 
