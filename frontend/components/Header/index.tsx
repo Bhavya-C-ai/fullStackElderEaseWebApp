@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { UserAuth } from "app/context/AuthContext.js"
+import { UserAuth } from "../../app/context/AuthContext"
 
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";

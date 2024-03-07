@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import PageTitle from "@/components/PageTitle";
 import Image from "next/image";
 import { DollarSign, Users, CreditCard, Activity } from "lucide-react";
@@ -6,8 +6,8 @@ import Card, { CardContent, CardProps } from "@/components/Card";
 import BarChart from "@/components/BarChart";
 import SalesCard, { SalesProps } from "@/components/SalesCard";
 
-import ErrorPage from "app/(site)/error/page"
-import {app} from "app/(site)/firebase";
+import ErrorPage from "app/(site)/error/page";
+import { app } from "app/(site)/firebase";
 import Testimonial from "@/components/cardsslider";
 import React, { useEffect, useState } from "react";
 import { UserAuth } from "app/context/AuthContext.js";
@@ -22,214 +22,199 @@ import {
   doc,
   updateDoc,
   getDoc,
-  setDoc
+  setDoc,
 } from "firebase/firestore";
 const cardData = [
   {
     label: "Total Revenue",
     amount: "$45,231.89",
     discription: "+20.1% from last month",
-    icon: DollarSign
+    icon: DollarSign,
   },
   {
     label: "Subscriptions",
     amount: "+2350",
     discription: "+180.1% from last month",
-    icon: Users
+    icon: Users,
   },
   {
     label: "Sales",
     amount: "+12,234",
     discription: "+19% from last month",
-    icon: CreditCard
+    icon: CreditCard,
   },
   {
     label: "Active Now",
     amount: "+573",
     discription: "+201 since last hour",
-    icon: Activity
-  }
+    icon: Activity,
+  },
 ];
 
 const uesrSalesData = [
   {
     name: "Olivia Martin",
     email: "olivia.martin@email.com",
-    saleAmount: "+$1,999.00"
+    saleAmount: "+$1,999.00",
   },
   {
     name: "Jackson Lee",
     email: "isabella.nguyen@email.com",
-    saleAmount: "+$1,999.00"
+    saleAmount: "+$1,999.00",
   },
   {
     name: "Isabella Nguyen",
     email: "isabella.nguyen@email.com",
-    saleAmount: "+$39.00"
+    saleAmount: "+$39.00",
   },
   {
     name: "William Kim",
     email: "will@email.com",
-    saleAmount: "+$299.00"
+    saleAmount: "+$299.00",
   },
   {
     name: "Sofia Davis",
     email: "sofia.davis@email.com",
-    saleAmount: "+$39.00"
-  }
+    saleAmount: "+$39.00",
+  },
 ];
 
-
 export default function Home() {
-  const {user}=UserAuth();
-  const [array1,setarray1]=useState([]);
-  const [array2,setarray2]=useState([]);
-  const [array3,setarray3]=useState([]);
-    const db= getFirestore(app);
+  const { user } = UserAuth();
+  const [array1, setarray1] = useState([]);
+  const [array2, setarray2] = useState([]);
+  const [array3, setarray3] = useState([]);
+  const db = getFirestore(app);
 
-    useEffect(() => {
-      const updateArrays = async () => {
-        if (!user || !user.uid) {
-          return;
-        }
-        const docRef = doc(db, "users", user?.uid);
-        const docSnapshot = await getDoc(docRef);
-        const array1 =await docSnapshot?.data()?.noOfClicksAllTime;  
-        const array2 =await docSnapshot?.data()?.noOfPosesInADay;
-        const array3 =await docSnapshot?.data()?.timeSpentPerDay;
-        console.log("please chal ja")
-        console.log(docSnapshot?.data()?.noOfPosesInADay);
-  
-        // Update state variables
-        setarray1(array1 || []);
-        setarray2(array2 || []);
-        setarray3(array3 || []); // If diseasesData is null or undefined, set an empty array
-        
-      };
-  
-      updateArrays();
-    }, [user, db]);
-    
-    // const fetchUserTimeSpentPerDay = async () => {
-    //   try {
-    //     const docRef = doc(db, "users", user.uid);
-    //     const docSnapshot = await getDoc(docRef);
-       
-    //     return docSnapshot?.data()?.timeSpentPerDay; 
-      
-    //   } catch (error) {
-    //     console.log("Error fetching document data:", error);
-    //   }
-    // }
-    
-    // const fetchUserNoOfPosesADay= async () => {
-    //   try {
-    //     const docRef = doc(db, "users", user.uid);
-    //     const docSnapshot = await getDoc(docRef);
-    //     const data=await docSnapshot?.data()?.timeSpentPerDay;
-    //     // console.log("data")
-    //     // console.log(data)
-        
-    //     return docSnapshot?.data()?.noOfPosesInADay; 
-      
-    //   } catch (error) {
-    //     console.log("Error fetching document data:", error);
-    //   }
-    // }
-    // const fetchUserNoOfClicksAllTime= async () => {
-    //   try {
-    //     const docRef = doc(db, "users", user.uid);
-    //     const docSnapshot = await getDoc(docRef);
-    //     const data=await docSnapshot?.data()?.noOfClicksAllTime; 
-    //     setarray1(data);
-    //     console.log("data")
-    //     console.log(data)
-    //     return docSnapshot?.data()?.noOfClicksAllTime; 
-    //   } catch (error) {
-    //     console.log("Error fetching document data:", error);
-    //   }
-    // }
-    // fetchUserNoOfClicksAllTime();
-    // fetchUserTimeSpentPerDay();
-    // fetchUserNoOfPosesADay();
+  useEffect(() => {
+    const updateArrays = async () => {
+      if (!user || !user.uid) {
+        return;
+      }
+      const docRef = doc(db, "users", user?.uid);
+      const docSnapshot = await getDoc(docRef);
+      const array1 = await docSnapshot?.data()?.noOfClicksAllTime;
+      const array2 = await docSnapshot?.data()?.noOfPosesInADay;
+      const array3 = await docSnapshot?.data()?.timeSpentPerDay;
+      console.log("please chal ja");
+      console.log(docSnapshot?.data()?.noOfPosesInADay);
+
+      // Update state variables
+      setarray1(array1 || []);
+      setarray2(array2 || []);
+      setarray3(array3 || []); // If diseasesData is null or undefined, set an empty array
+    };
+
+    updateArrays();
+  }, [user, db]);
+
+  // const fetchUserTimeSpentPerDay = async () => {
+  //   try {
+  //     const docRef = doc(db, "users", user.uid);
+  //     const docSnapshot = await getDoc(docRef);
+
+  //     return docSnapshot?.data()?.timeSpentPerDay;
+
+  //   } catch (error) {
+  //     console.log("Error fetching document data:", error);
+  //   }
+  // }
+
+  // const fetchUserNoOfPosesADay= async () => {
+  //   try {
+  //     const docRef = doc(db, "users", user.uid);
+  //     const docSnapshot = await getDoc(docRef);
+  //     const data=await docSnapshot?.data()?.timeSpentPerDay;
+  //     // console.log("data")
+  //     // console.log(data)
+
+  //     return docSnapshot?.data()?.noOfPosesInADay;
+
+  //   } catch (error) {
+  //     console.log("Error fetching document data:", error);
+  //   }
+  // }
+  // const fetchUserNoOfClicksAllTime= async () => {
+  //   try {
+  //     const docRef = doc(db, "users", user.uid);
+  //     const docSnapshot = await getDoc(docRef);
+  //     const data=await docSnapshot?.data()?.noOfClicksAllTime;
+  //     setarray1(data);
+  //     console.log("data")
+  //     console.log(data)
+  //     return docSnapshot?.data()?.noOfClicksAllTime;
+  //   } catch (error) {
+  //     console.log("Error fetching document data:", error);
+  //   }
+  // }
+  // fetchUserNoOfClicksAllTime();
+  // fetchUserTimeSpentPerDay();
+  // fetchUserNoOfPosesADay();
   return (
-   <>
-   {user ? (
-   <div className="my-10 mx-60 pl-10 bg-gradient-to-t from-transparent to-[#dee7ff47] dark:bg-gradient-to-t dark:to-[#252A42]">
-   <div></div>
-   
-   <br/>
-   <br/>
-   <br/>
-   <br/>
-   <div className="flex flex-col gap-5  w-full">
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <Testimonial clicks={array1}/>
-        
-     
-      
-      <section className="grid grid-cols-1  gap-10 transition-all lg:grid-cols-2 mb-10">
-        <CardContent>
-        <PageTitle title="Time spent per day" />
-      
-          <p className="p-4 font-semibold">Overview</p>
-            
-          <BarChart datas={array3}/>
-          
-        </CardContent>
-        
-        <section className="p-25 mt-25">
-          <span className="bg-gradient-to-r from-blue-400 via-blue-400 to-blue-500 bg-clip-text text-transparent text-center mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-4xl text-center mb-15">Track your yoga journey daily</span>
-              <br/>
-              
-              <span className="bg-gradient-to-r from-blue-400 via-blue-400 to-blue-500 bg-clip-text text-transparent text-center mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-4xl text-center px-20">effortlessly with our 
-              </span>
-              <br/>
-              <span className="bg-gradient-to-r from-blue-400 via-blue-400 to-blue-500 bg-clip-text text-transparent text-center mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-4xl text-center  px-20">time-tracking graph
-              </span>
-            
-          </section>
-          
+    <>
+      {user ? (
+        <div className="my-10  mx-5 md:mx-60 pl-10 bg-gradient-to-t from-transparent to-[#dee7ff47] dark:bg-gradient-to-t dark:to-[#252A42]">
+          <div></div>
 
-        {/*  */}gamebox linux download
-      </section>
-     
-      <section className="grid grid-cols-2 gap-4">
-        
-        
-      <section className="p-25 mt-25">
-          <span className="bg-gradient-to-r from-blue-400 via-blue-400 to-blue-500 bg-clip-text text-transparent text-center mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-4xl text-center mb-15">Stay updated on your daily yoga  
-              </span>
-              <br/>
-              
-              <span className="bg-gradient-to-r from-blue-400 via-blue-400 to-blue-500 bg-clip-text text-transparent text-center mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-4xl text-center px-20">practice with our time
-              </span>
-              <br/>
-              <span className="bg-gradient-to-r from-blue-400 via-blue-400 to-blue-500 bg-clip-text text-transparent text-center mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-4xl text-center  px-30">-tracking graph.
-              </span>
-            
-          </section>
-          
-         
-        <CardContent>
-        <PageTitle title="No of Poses in a Day" />
-          <p className="p-4 font-semibold">Overview</p>
+          <br />
+          <br />
+          <br />
+          <br />
+          <div className="flex flex-col gap-5  w-full">
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <Testimonial clicks={array1} />
 
-          <BarChart  datas={array2}/>
-        </CardContent>
-        {/*  */}
-      </section>
-    </div>
-    </div>):(
+            <section className="grid grid-cols-1  gap-10 transition-all lg:grid-cols-2 mb-10">
+              <CardContent>
+                <PageTitle title="Time spent per day" />
+
+                <p className="p-4 font-semibold">Overview</p>
+
+                <BarChart datas={array3} />
+              </CardContent>
+              <section className="p-25 mt-25">
+                <span className="bg-gradient-to-r from-blue-400 via-blue-400 to-blue-500 bg-clip-text text-transparent text-center mt-5 text-3xl font-extrabold leading-[1.15] text-black md:text-4xl text-center mb-15">
+                  Track your yoga journey daily
+                  <br />
+                  effortlessly with our time
+                  <br />
+                  tracking graph
+                </span>
+              </section>
+              {/*  */}gamebox linux download
+            </section>
+
+            <section className="grid md:grid-cols-2 grid-cols-1 gap-4">
+              <section className="p-25 mt-25">
+                <span className="bg-gradient-to-r from-blue-400 via-blue-400 to-blue-500 bg-clip-text text-transparent text-center mt-5 text-3xl font-extrabold leading-[1.15] text-black md:text-4xl text-center mb-15">
+                  Stay updated on your daily yoga
+                  <br />
+                  practice with our time
+                  <br />
+                  tracking graph.
+                  <br />
+                </span>
+              </section>
+
+              <CardContent>
+                <PageTitle title="No of Poses in a Day" />
+                <p className="p-4 font-semibold">Overview</p>
+
+                <BarChart datas={array2} />
+              </CardContent>
+              {/*  */}
+            </section>
+          </div>
+        </div>
+      ) : (
         <ErrorPage />
-    )}
-   </>
+      )}
+    </>
   );
-  
 }

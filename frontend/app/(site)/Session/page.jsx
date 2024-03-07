@@ -289,9 +289,9 @@ const Homepage = () => {
           <br />
           <section
             id="support"
-            className="px-44 pt-0 md:px-8 2xl:px-0 w-90/100"
+            className="md:px-44  px:4 pt-0 md:px-8 2xl:px-0 w-90/100"
           >
-            <div className="relative mx-auto w-full px-7.5 pt-0 lg:px-15 lg:pt-5 xl:px-20 xl:pt-20">
+            <div className="relative mx-auto w-full px-2 md:px-7.5 pt-0 lg:px-15 lg:pt-5 xl:px-20 xl:pt-20">
               <div className="absolute left-0 top-0 -z-1 h-2/3 w-full rounded-lg bg-gradient-to-t from-transparent to-[#dee7ff47] dark:bg-gradient-to-t dark:to-[#252A42]"></div>
               <div className="absolute bottom-[-255px] left-0 -z-1 h-full w-full">
                 <Image
