@@ -26,3 +26,22 @@ npm i
 
 ### Start the app
 npx run dev
+
+### Start the server
+navigate to server folder
+```shell
+cd server
+```
+Make your virtual env
+```shell
+python3 -m venv venv
+```
+Activate your venv
+```shell
+source venv/bin/activate
+```
+Install dependencies
+```shell
+pip install -r requirements.txt
+```
+
