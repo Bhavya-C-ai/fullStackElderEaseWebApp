@@ -173,10 +173,11 @@ export default function Home() {
         <Testimonial clicks={array1}/>
         
      
-      <PageTitle title="Dashboard" />
       
       <section className="grid grid-cols-1  gap-10 transition-all lg:grid-cols-2 mb-10">
         <CardContent>
+        <PageTitle title="Time spent per day" />
+      
           <p className="p-4 font-semibold">Overview</p>
             
           <BarChart datas={array3}/>
@@ -196,8 +197,9 @@ export default function Home() {
           </section>
           
 
-        {/*  */}
+        {/*  */}gamebox linux download
       </section>
+     
       <section className="grid grid-cols-2 gap-4">
         
         
@@ -216,6 +218,7 @@ export default function Home() {
           
          
         <CardContent>
+        <PageTitle title="No of Poses in a Day" />
           <p className="p-4 font-semibold">Overview</p>
 
           <BarChart  datas={array2}/>

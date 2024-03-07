@@ -4,7 +4,12 @@ Solid is a free Next.js template specifically crafted for startups, SaaS, and so
 
 This Next.js template's homepage comes with an awesome hero area, logos of associated brands, a features section, an about section, another features section with tabs, counters, and star ratings, integration options, clear call-to-actions, an FAQ section with accordions, a testimonials section, pricing tables, a contact page, a blog, and a distinctive footer.
 
-**Solid Next.js template packed with all necessary external pages** - such as login, registration, blog grids, and single blog pages, among others. This broad collection of pages provides all the necessary tools to create a feature-packed, comprehensive, and visually appealing website or landing page for software, a web application, or SaaS.
+**Solid Next.js template packed with all necessary external pages** - such as login, registration, blog grids, and single blog pages, among others. This broad collection of pages provides all the necessa
+### Cloning the repository
+
+```shell
+
+```ry tools to create a feature-packed, comprehensive, and visually appealing website or landing page for software, a web application, or SaaS.
 
 ### [🔥 Get Solid Pro - Next.js SaaS Boilerplate and Starter Kit](https://nextjstemplates.com/templates/solid)
 

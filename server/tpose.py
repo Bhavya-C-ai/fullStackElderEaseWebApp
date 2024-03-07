@@ -40,7 +40,7 @@ def GiveLabelForTPose(left_elbow_angle, right_elbow_angle, left_shoulder_angle, 
         else:
             label='Shoulders should be 90 degrees'
     else:
-        label='Keep elbowws straight'
+        label='Keep elbows straight'
     
     if(label!=prev_label): 
         speak_label(label)
