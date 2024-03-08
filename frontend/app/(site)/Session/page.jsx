@@ -110,7 +110,7 @@ const Homepage = () => {
     cobraPoseVideo: "Bhujangasana",
     toeTouchPoseVideo: "Toe Touch",
     backBendPoseVideo: "Back Bend",
-    balasanaposevideo: "Balasana",
+    balasanaPoseVideo: "Balasana",
     corpsePoseVideo: "Savasana",
     warriorPoseVideo: "Virabhadrasana II",
   };
@@ -215,7 +215,7 @@ const Homepage = () => {
     Bhujangasana: "cobraPoseVideo",
     "Toe Touch": "toeTouchPoseVideo",
     "Back Bend": "backBendPoseVideo",
-    Balasana: "balasanaposevideo",
+    Balasana: "balasanaPoseVideo",
     Savasana: "corpsePoseVideo",
     "Virabhadrasana II": "warriorPoseVideo",
   };
