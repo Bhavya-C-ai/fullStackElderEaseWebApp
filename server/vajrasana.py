@@ -37,7 +37,7 @@ def giveLabelForVajrasanaSide(left_elbow_angle, right_elbow_angle, left_knee_ang
             if (left_knee_angle > 0 and left_knee_angle < 100) or (right_knee_angle > 290 and right_knee_angle < 360):
                 label = 'Thats it, Perfect Vajrasana'
             else:
-                label = 'adjust the angle of both knees for vajrasana'
+                label = 'Adjust the angle of both knees for vajrasana'
         else:
             label = 'Keep your back straight with hips at proper angle'
     else:

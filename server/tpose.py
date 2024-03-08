@@ -38,7 +38,7 @@ def GiveLabelForTPose(left_elbow_angle, right_elbow_angle, left_shoulder_angle, 
             else:
                 label='Straighten up your knees'
         else:
-            label='Shoulders should be 90 degrees'
+            label='Shoulders should be at 90 degrees with the waist'
     else:
         label='Keep elbows straight'
     

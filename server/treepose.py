@@ -47,9 +47,9 @@ def classifyTreePose(landmarks, output_image, display=False):
                 if left_shoulder_angle > 150 and left_shoulder_angle < 200 and right_shoulder_angle > 150 and right_shoulder_angle < 200:
                     label = 'Thats it, Perfect Tree Pose'
                 else:
-                    label='Both shoulders should be at 90 degrees with waist.'
+                    label='Straighten up your shoulders'
             else:
-                label='Elbows should be at 90 degrees with arms'
+                label='Raise your hands a little higher'
         else:
             label="Keep either foot on the knee or above"
     else: 
