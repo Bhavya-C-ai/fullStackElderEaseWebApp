@@ -46,11 +46,11 @@ def classifyWarriorPose(landmarks, output_image, display=False):
                if left_knee_angle > 105 and left_knee_angle < 135 or right_knee_angle > 105 and right_knee_angle < 135:
                     label = 'Thats it, Perfect Warrior Pose'
                else:
-                    label='Bend your knees a little bit outwards for Warrior II pose'
+                    label='Bend your knees a little bit outwards for Warrior pose'
         else:
-            label='Both left and right shoulders should be straight out at 90° with the waist.'
+            label='Both left and right shoulders should be straight out at 90 degrees with the waist.'
     else:
-        label='Elbows should be at 90deg with arms'
+        label='Elbows should be at 90 degrees with arms'
     
     global prev_label
     if(label!=prev_label): 
